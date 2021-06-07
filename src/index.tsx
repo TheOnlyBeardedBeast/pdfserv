@@ -19,7 +19,7 @@ const MyDocument = () => (
   </Document>
 );
 
-app.get("/:lang", async (req, res) => {
+app.get("/:lang?", async (req, res) => {
   const downloadParam = req.query["download"];
   const forceDownload = downloadParam === "" || !!downloadParam;
 
